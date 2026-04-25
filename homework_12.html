@@ -518,6 +518,11 @@ penguins_3 = read_excel(&quot;penguins.xlsx&quot;, sheet = 3, na = &quot;NA&quot
 <p>Let’s initialize a temporary DuckDB database:<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
 <pre class="r"><code>con &lt;- DBI::dbConnect(duckdb::duckdb())</code></pre>
 </div>
+<div id="write-penguins-tibble-to-db" class="section level2">
+<h2>Write Penguins Tibble to DB</h2>
+<p>Now, let’s write our combined penguins tibble to the database:<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></p>
+<pre class="r"><code>dbWriteTable(con, &quot;penguins&quot;, penguins, overwrite = TRUE) #overwriting in case of writing it in more than once when run more than once</code></pre>
+</div>
 </div>
 <div class="footnotes footnotes-end-of-document">
 <hr />
@@ -527,6 +532,7 @@ penguins_3 = read_excel(&quot;penguins.xlsx&quot;, sheet = 3, na = &quot;NA&quot
 <li id="fn3"><p>Question 3 Complete<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
 <li id="fn4"><p>Question 4 Complete<a href="#fnref4" class="footnote-back">↩︎</a></p></li>
 <li id="fn5"><p>Question 1 Complete<a href="#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p>Question 2 Complete<a href="#fnref6" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
 

@@ -78,6 +78,12 @@ Let's initialize a temporary DuckDB database:^[Question 1 Complete]
 con <- DBI::dbConnect(duckdb::duckdb())
 ```
 
+## Write Penguins Tibble to DB
+
+Now, let's write our combined penguins tibble to the database:^[Question 2 Complete]
+```{r}
+dbWriteTable(con, "penguins", penguins, overwrite = TRUE) #overwriting in case of writing it in more than once when run more than once
+```
 
 
 
