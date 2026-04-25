@@ -69,6 +69,14 @@ penguins %>%
 ```
 
 
+# Penguin Database
+
+## Create Temp DuckDB
+
+Let's initialize a temporary DuckDB database:^[Question 1 Complete]
+```{r}
+con <- DBI::dbConnect(duckdb::duckdb())
+```
 
 
 
