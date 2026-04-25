@@ -56,8 +56,17 @@ ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +
   )
 ```
 
+## Average Body Masses Table
 
-
+The following table showcases the average body masses for the different penguin species:^[Question 4 Complete]
+```{r}
+penguins %>%
+  group_by(species) %>%
+  summarize(
+    avg_body_mass = mean(body_mass_g, na.rm = TRUE)
+  ) %>%
+  kable(caption = "Average Body Mass by Species")
+```
 
 
 
