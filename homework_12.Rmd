@@ -86,5 +86,11 @@ dbWriteTable(con, "penguins", penguins, overwrite = TRUE) #overwriting in case o
 ```
 
 
+## dbplyr Connection
+
+Let's establish our dbplyr connection to our penguins database table:^[Question 3 Complete]
+```{r}
+penguins_db <- tbl(con, "penguins")
+```
 
 

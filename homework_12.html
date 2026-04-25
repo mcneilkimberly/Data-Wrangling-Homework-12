@@ -523,6 +523,11 @@ penguins_3 = read_excel(&quot;penguins.xlsx&quot;, sheet = 3, na = &quot;NA&quot
 <p>Now, let’s write our combined penguins tibble to the database:<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></p>
 <pre class="r"><code>dbWriteTable(con, &quot;penguins&quot;, penguins, overwrite = TRUE) #overwriting in case of writing it in more than once when run more than once</code></pre>
 </div>
+<div id="dbplyr-connection" class="section level2">
+<h2>dbplyr Connection</h2>
+<p>Let’s establish our dbplyr connection to our penguins database table:<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></p>
+<pre class="r"><code>penguins_db &lt;- tbl(con, &quot;penguins&quot;)</code></pre>
+</div>
 </div>
 <div class="footnotes footnotes-end-of-document">
 <hr />
@@ -533,6 +538,7 @@ penguins_3 = read_excel(&quot;penguins.xlsx&quot;, sheet = 3, na = &quot;NA&quot
 <li id="fn4"><p>Question 4 Complete<a href="#fnref4" class="footnote-back">↩︎</a></p></li>
 <li id="fn5"><p>Question 1 Complete<a href="#fnref5" class="footnote-back">↩︎</a></p></li>
 <li id="fn6"><p>Question 2 Complete<a href="#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn7"><p>Question 3 Complete<a href="#fnref7" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
 
