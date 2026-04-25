@@ -11,9 +11,9 @@ urlcolor: blue
 
 ```{r setup, include=FALSE, echo=TRUE}
 knitr::opts_chunk$set(
-  echo = TRUE#, 
-  #warning=FALSE, 
-  #message=FALSE
+  echo = TRUE, 
+  warning=FALSE, 
+  message=FALSE
   )
 library(knitr)
 library(dplyr)
@@ -93,4 +93,13 @@ Let's establish our dbplyr connection to our penguins database table:^[Question 
 penguins_db <- tbl(con, "penguins")
 ```
 
+## Compute Body Mass Averages and Show SQL Query
 
+Finally, let's calculate the average body masses for the different penguin species. The following SQL query is what results from this calculation:^[Question 4 Complete]
+```{r}
+avg_mass = penguins_db %>%
+  group_by(species) %>%
+  summarize(avg_body_mass = mean(body_mass_g, na.rm = TRUE)) 
+
+show_query(avg_mass)
+```
