@@ -30,10 +30,26 @@ library(tidyverse)
 
 Let's load the three spreadsheets from the Excel file into separate tibbles, taking care that the data types import correctly:^[Question 1 Complete]
 ```{r}
-penguins_1 = read_excel("penguins.xlsx", sheet = 1)
-penguins_2 = read_excel("penguins.xlsx", sheet = 2)
-penguins_3 = read_excel("penguins.xlsx", sheet = 3)
+penguins_1 = read_excel("penguins.xlsx", sheet = 1, na = "NA")
+penguins_2 = read_excel("penguins.xlsx", sheet = 2, na = "NA")
+penguins_3 = read_excel("penguins.xlsx", sheet = 3, na = "NA")
 ```
+
+## Stack the Data
+
+Now, let's combine the three datasets into one, longer tibble:^[Question 2 Complete]
+```{r}
+penguins = bind_rows(penguins_1, penguins_2, penguins_3)
+```
+
+
+
+
+
+
+
+
+
 
 
 

@@ -454,15 +454,21 @@ pre code {
 <div id="load-worksheets" class="section level2">
 <h2>Load Worksheets</h2>
 <p>Let’s load the three spreadsheets from the Excel file into separate tibbles, taking care that the data types import correctly:<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
-<pre class="r"><code>penguins_1 = read_excel(&quot;penguins.xlsx&quot;, sheet = 1)
-penguins_2 = read_excel(&quot;penguins.xlsx&quot;, sheet = 2)
-penguins_3 = read_excel(&quot;penguins.xlsx&quot;, sheet = 3)</code></pre>
+<pre class="r"><code>penguins_1 = read_excel(&quot;penguins.xlsx&quot;, sheet = 1, na = &quot;NA&quot;)
+penguins_2 = read_excel(&quot;penguins.xlsx&quot;, sheet = 2, na = &quot;NA&quot;)
+penguins_3 = read_excel(&quot;penguins.xlsx&quot;, sheet = 3, na = &quot;NA&quot;)</code></pre>
+</div>
+<div id="stack-the-data" class="section level2">
+<h2>Stack the Data</h2>
+<p>Now, let’s combine the three datasets into one, longer tibble:<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+<pre class="r"><code>penguins = bind_rows(penguins_1, penguins_2, penguins_3)</code></pre>
 </div>
 </div>
 <div class="footnotes footnotes-end-of-document">
 <hr />
 <ol>
 <li id="fn1"><p>Question 1 Complete<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Question 2 Complete<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
 
