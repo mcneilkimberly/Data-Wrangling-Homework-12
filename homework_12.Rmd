@@ -1,0 +1,39 @@
+---
+title: "Homework 12"
+author: "Kimberly McNeil"
+date: "4/24/2026"
+output:
+  html_document:
+    code_folding: hide
+linkcolor: blue
+urlcolor: blue
+---
+
+```{r setup, include=FALSE, echo=TRUE}
+knitr::opts_chunk$set(
+  echo = TRUE#, 
+  #warning=FALSE, 
+  #message=FALSE
+  )
+library(knitr)
+library(dplyr)
+library(readxl)
+library(writexl)
+library(DBI)
+library(duckdb)
+library(tidyverse)
+```
+
+# Penguin Excel Spreadsheet
+
+## Load Worksheets
+
+Let's load the three spreadsheets from the Excel file into separate tibbles, taking care that the data types import correctly:^[Question 1 Complete]
+```{r}
+penguins_1 = read_excel("penguins.xlsx", sheet = 1)
+penguins_2 = read_excel("penguins.xlsx", sheet = 2)
+penguins_3 = read_excel("penguins.xlsx", sheet = 3)
+```
+
+
+
