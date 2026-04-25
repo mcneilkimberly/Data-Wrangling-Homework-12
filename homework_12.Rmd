@@ -42,7 +42,19 @@ Now, let's combine the three datasets into one, longer tibble:^[Question 2 Compl
 penguins = bind_rows(penguins_1, penguins_2, penguins_3)
 ```
 
+## Bill Measurements Scatterplot
 
+The following scatterplot showcases bill depth versus bill length, colored by species, faceted by island:^[Question 3 Complete]
+```{r}
+ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +
+  geom_point() +
+  facet_wrap(~island) +
+  labs(
+    title = "Bill Depth vs. Bill Length by Species (Color) and Island (Sections)",
+    x = "Bill Length (mm)",
+    y = "Bill Depth (mm)"
+  )
+```
 
 
 
